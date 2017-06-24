@@ -40,8 +40,6 @@ for key, value in result_new_dict.items():
     if index == 0:
         break
 
-result = pd.DataFrame( [ 
-        [orderid, predict_roomid, prob] for orderid, d in result_new_dict.items() 
-    
-    ])
+result = pd.DataFrame([ 
+    [orderid, d[0], d[1]] for orderid, d in result_new_dict.items() ], columns = ["orderid", "predict_roomid", "prob"])
 result.to_csv( "../data/result.csv", index = None, encoding = "utf-8" )
