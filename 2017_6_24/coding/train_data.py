@@ -86,7 +86,7 @@ param = {
         'booster': 'gbtree',
         'objective':'binary:logistic',
         'scale_pos_weight': neg/pos,
-        'lambda': 600,
+#        'lambda': 600,
         'max_depth':6, 
         'eta':0.3, 
         'silent':1, 
